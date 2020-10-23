@@ -1,0 +1,13 @@
+*.tif
+*.pyc
+thumbs.db
+.env
+.cfg
+.cfg.tst
+.DS_Store
+env.cfg*
+.idea
+venv
+deploy
+__pycache__/*
+example-data/*

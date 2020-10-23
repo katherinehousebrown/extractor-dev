@@ -1,0 +1,803 @@
+{
+	"info": {
+		"_postman_id": "e179727e-bc63-4c96-9452-23c7f05a17ac",
+		"name": "Extractor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/health_check",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"conditioner",
+						"health_check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIB01",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16694031/SFN00000/CIB01/cb01na360b2/rpf/na360b2/04k9ep2a.i41",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16694031/SFN00000/CIB01/cb01na360b2/rpf/na360b2/04k9ep2a.i41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIB01 Overview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16694031/SFN00000/CIB01/cb01na360b2/rpf/na360b2g.ovr",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16694031/SFN00000/CIB01/cb01na360b2/rpf/na360b2g.ovr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIB05",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16752271/SFN00000/CIB05/cb05na18031/rpf/n00w075/0001791a.i21",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16752271/SFN00000/CIB05/cb05na18031/rpf/n00w075/0001791a.i21"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIB05 Overview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16752271/SFN00000/CIB05/cb05na18031/rpf/n00w075g.ovr",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16752271/SFN00000/CIB05/cb05na18031/rpf/n00w075g.ovr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIB10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16752272/SFN00000/CIB10/cb10s000032/rpf/n32w112/00dz4k16.i11",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16752272/SFN00000/CIB10/cb10s000032/rpf/n32w112/00dz4k16.i11"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIB10 Overview",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16752272/SFN00000/CIB10/cb10s000032/rpf/n32w112g.ovr",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16752272/SFN00000/CIB10/cb10s000032/rpf/n32w112g.ovr"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIB10 TIFF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16752272/SFN00000/CIB10/cb10s000032/tiff/n32w112g.tif",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16752272/SFN00000/CIB10/cb10s000032/tiff/n32w112g.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WV1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://img-cm-o2/16694632/NCL00000/Original/00000150/FVEY/UNC/NL_5100000_13JAN10WV011100010JAN13144213-P1BS-052062683010_05_P004_________AAE_0AAAAABIABE0.NTF",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://img-cm-o2/16694632/NCL00000/Original/00000150/FVEY/UNC/NL_5100000_13JAN10WV011100010JAN13144213-P1BS-052062683010_05_P004_________AAE_0AAAAABIABE0.NTF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WV2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://img-cm-o2/16694633/NCL00000/Original/000000105/FVEY/UNC/NL_501000000_13AUG12WV020600012AUG13081953-P1BS-052710584010_05_P005_________AAE_0AAAAABIABA0.NTF",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://img-cm-o2/16694633/NCL00000/Original/000000105/FVEY/UNC/NL_501000000_13AUG12WV020600012AUG13081953-P1BS-052710584010_05_P005_________AAE_0AAAAABIABA0.NTF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "WV3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://img-cm-o2/16735792/NCL00000/Original/000000756/LCD/UNC/NL_657000000_18APR23140933-M1BS_R3C1-502068878030_01_P001.NTF",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://img-cm-o2/16735792/NCL00000/Original/000000756/LCD/UNC/NL_657000000_18APR23140933-M1BS_R3C1-502068878030_01_P001.NTF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DTED0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://ele-gv-o2/16694069/SFN00000/dted0/dted00/dted/e000/n05.dt0",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694069/SFN00000/dted0/dted00/dted/e000/n05.dt0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DTED1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://ele-gv-o2/16694070/SFN00000/dted1/dted116/dted/w091/n42.dt1",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694070/SFN00000/dted1/dted116/dted/w091/n42.dt1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DTED2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://ele-gv-o2/16694071/SFN00000/dted2/dted207c/dted/w163/n60.dt2",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694071/SFN00000/dted2/dted207c/dted/w163/n60.dt2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SRTM2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://ele-gv-o2/16694507/SFN00000/srtmf_1/srtf203/dted/e000/e000n52aoim.ntf",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694507/SFN00000/srtmf_1/srtf203/dted/e000/e000n52aoim.ntf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE5(41N)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://ele-gv-o2/16694214/SFN00000/HRTE5/29N061E/292700N0614800E_20110413160401_HALOE_100_DSM_00_0_UFO.tif",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694214/SFN00000/HRTE5/29N061E/292700N0614800E_20110413160401_HALOE_100_DSM_00_0_UFO.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE5(42N)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://ele-gv-o2/16694214/SFN00000/HRTE5/37N070E/373300N0701200E_20121101000000_BKEYE_100_QCS_00_0_UFO.tif",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694214/SFN00000/HRTE5/37N070E/373300N0701200E_20121101000000_BKEYE_100_QCS_00_0_UFO.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Terraform v4",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCIsIng1dCI6Ikh6ZWxiN0ZTdnZDTWMyODBPQTMyd3VzMWFCayIsImtpZCI6Im9yYWtleSJ9.eyJzdWIiOiIxMTU4MzM1OTc5Iiwib3JhY2xlLm9hdXRoLnVzZXJfb3JpZ2luX2lkX3R5cGUiOiJMREFQX1VJRCIsIm9yYWNsZS5vYXV0aC51c2VyX29yaWdpbl9pZCI6IjExNTgzMzU5NzkiLCJpc3MiOiJodHRwczovL2d4aXNhY2Nlc3MubmdhLm1pbC8iLCJvcmFjbGUub2F1dGguc3ZjX3BfbiI6Ik9BdXRoU2VydmljZVByb2ZpbGUiLCJpYXQiOjE1MTk5MTc4MjcsIm9yYWNsZS5vYXV0aC5wcm4uaWRfdHlwZSI6IkxEQVBfVUlEIiwib3JhY2xlLm9hdXRoLnRrX2NvbnRleHQiOiJyZXNvdXJjZV9hY2Nlc3NfdGsiLCJleHAiOjE1MTk5MjE0MjcsInBybiI6IjExNTgzMzU5NzkiLCJqdGkiOiIyMzBiOWFkNy00YTAxLTQ0OTQtOGU3Yy1lZjI3YWM3MjhmOWUiLCJvcmFjbGUub2F1dGguY2xpZW50X29yaWdpbl9pZCI6IkFwaWdlZUFQSVVDb3BzWTlPOUk4Iiwib3JhY2xlLm9hdXRoLnNjb3BlIjoiVXNlclByb2ZpbGUubWUiLCJ1c2VyLnRlbmFudC5uYW1lIjoiRGVmYXVsdERvbWFpbiIsIm9yYWNsZS5vYXV0aC5pZF9kX2lkIjoiMTIzNDU2NzgtMTIzNC0xMjM0LTEyMzQtMTIzNDU2Nzg5MDEyIn0.l2HtXVDaLs5Fg3ZUcA1z3FeWIcGy29Qj0PnrHPBiQjyil3X4KFaIQC65ywOl0-vr6OgX__syBa5nW-Lv4uG0N_5aXKLrVBUOiL1l7IJtcij129I6LpJIzYFy19FjtcIcmI5Zx-xKnOPsjiWKFs3oJ1MZQcsiehBdSfZIaP-UmWA",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "Bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						},
+						{
+							"key": "callBackUrl",
+							"type": "any"
+						},
+						{
+							"key": "authUrl",
+							"type": "any"
+						},
+						{
+							"key": "accessTokenUrl",
+							"type": "any"
+						},
+						{
+							"key": "clientId",
+							"type": "any"
+						},
+						{
+							"key": "clientSecret",
+							"type": "any"
+						},
+						{
+							"key": "clientAuth",
+							"type": "any"
+						},
+						{
+							"key": "grantType",
+							"type": "any"
+						},
+						{
+							"key": "scope",
+							"type": "any"
+						},
+						{
+							"key": "username",
+							"type": "any"
+						},
+						{
+							"key": "password",
+							"type": "any"
+						},
+						{
+							"key": "redirectUri",
+							"type": "any"
+						},
+						{
+							"key": "refreshToken",
+							"type": "any"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint&file_uri=s3://ele-gv-o2/16753568/SFN00000/TERRAFORM/TERRAFORM_v4/e000_n045_e060_n090/e000/n45/e000n45_TFRM.dt2",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": null
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16753568/SFN00000/TERRAFORM/TERRAFORM_v4/e000_n045_e060_n090/e000/n45/e000n45_TFRM.dt2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Condition GEOEYE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://img-cm-o2/16740167/NCL00000/Original/00004950/FVEY/UNC/NL_5940000_08JUN10OV05010005V100608P0005673694B222000100872M_000516079_____AAE_0AAAAAEEABQ0.ntf",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://img-cm-o2/16740167/NCL00000/Original/00004950/FVEY/UNC/NL_5940000_08JUN10OV05010005V100608P0005673694B222000100872M_000516079_____AAE_0AAAAAEEABQ0.ntf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Condition Planet",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://img-gv-o2/16758538/PLANET00/Iraq/20160629_100442_0c73_3B_AnalyticMS.tif",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://img-gv-o2/16758538/PLANET00/Iraq/20160629_100442_0c73_3B_AnalyticMS.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quickbird",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://img-cm-o2/16740167/NCL00000/Original/000001005/FVEY/UNC/NL_500100000_05FEB12OV05010005V120205M0011346214A222000100272M_000798661_____GA_E0AAAAAAJABA0.ntf",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://img-cm-o2/16740167/NCL00000/Original/000001005/FVEY/UNC/NL_500100000_05FEB12OV05010005V120205M0011346214A222000100272M_000798661_____GA_E0AAAAAAJABA0.ntf"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "IKONOS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://img-cm-o2/16694473/NCL00000/Original/00000420/FVEY/UNC/NL_2400000_12FEB07QB021100007FEB12155823-M1BS-052172709010_01_P023_________GA_E0AAAAAAGAAD0.NTF",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://img-cm-o2/16694473/NCL00000/Original/00000420/FVEY/UNC/NL_2400000_12FEB07QB021100007FEB12155823-M1BS-052172709010_01_P023_________GA_E0AAAAAAGAAD0.NTF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CI Ortho Regional sotirya",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16694007/SFN00000/REGORTHO/bu/sotirya/11APR23092405-S3DS-052567120010_01_P001-BROWSE_tn.jpg",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16694007/SFN00000/REGORTHO/bu/sotirya/11APR23092405-S3DS-052567120010_01_P001-BROWSE_tn.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CI Ortho Regional sadah",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://cim-gv-o2/16694007/SFN00000/REGORTHO/ym/sadah/07JUN08075911-S3AS-005668878010_01_P001-BROWSE_tn.jpg",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://cim-gv-o2/16694007/SFN00000/REGORTHO/ym/sadah/07JUN08075911-S3AS-005668878010_01_P001-BROWSE_tn.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Country Code (blackspoke)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"wkt\": \"POLYGON ((-163.004166666667 6.00416666666667 0,-163.004166666667 4.99583333333333 0,-161.995833333333 4.99583333333333 0,-161.995833333333 6.00416666666667 0,-163.004166666667 6.00416666666667 0))\"\n}"
+				},
+				"url": {
+					"raw": "http://34.235.192.106/api/countries",
+					"protocol": "http",
+					"host": [
+						"34",
+						"235",
+						"192",
+						"106"
+					],
+					"path": [
+						"api",
+						"countries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DTED0 - extracting up date elastic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}?fingerprint=&file_uri=s3://ele-gv-o2/16694069/SFN00000/dted0/dted00/dted/w163/n05.dt0",
+					"host": [
+						"{{url}}"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694069/SFN00000/dted0/dted00/dted/w163/n05.dt0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

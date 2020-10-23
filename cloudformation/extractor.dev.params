@@ -1,0 +1,3 @@
+VpcId=vpc-a665acde
+SubnetId=subnet-d949a9f6
+PermissionsBoundaryArn=arn:aws:iam::743670784198:policy/AdminPermissionBoundary

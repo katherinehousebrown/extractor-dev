@@ -1,0 +1,60 @@
+---
+info:
+  version: '1.0'
+  title: API
+paths:
+  "/extractor/extract":
+    get:
+      responses:
+        '200':
+          description: Success
+      parameters:
+      - type: string
+        description: fileuri
+        name: file_uri
+        in: query
+      - type: string
+        description: fingerprint
+        name: fingerprint
+        in: query
+      - type: string
+        description: version
+        name: version
+        in: query
+      tags:
+      - extractor
+      description: |-
+        This endpoint extracts the metadata associated with a given fileUri and fingerprint.
+        ---
+      summary: Geospatial Extent Extraction (and additional metadata)
+      operationId: get_extract_api_service
+  "/extractor/health":
+    get:
+      operationId: get_health_check_service
+      summary: Health Check
+      responses:
+        '200':
+          description: Success
+        '404':
+          description: Failure          
+      tags:
+      - extractor
+      description: |-
+        This endpoint will return the Health of the Service.
+        ---
+responses:
+  MaskError:
+    description: When any error occurs on mask
+  ParseError:
+    description: When a mask can't be parsed
+tags:
+- name: default
+  description: Default namespace
+- name: extractor
+  description:
+basePath: "/api"
+produces:
+- application/json
+swagger: '2.0'
+consumes:
+- application/json

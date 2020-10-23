@@ -1,0 +1,724 @@
+{
+	"info": {
+		"_postman_id": "64ce901c-29c2-48fb-95d1-a49ac1ffcde4",
+		"name": "HRTE Extraction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "HRTE5(42N)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ele-gv-o2/16694214/SFN00000/HRTE5/37N070E/373300N0701200E_20121101000000_BKEYE_100_QCS_00_0_UFO.tif?fingerprint=&file_uri=s3://ele-gv-o2/16694214/SFN00000/HRTE5/37N070E/373300N0701200E_20121101000000_BKEYE_100_QCS_00_0_UFO.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ele-gv-o2"
+					],
+					"path": [
+						"16694214",
+						"SFN00000",
+						"HRTE5",
+						"37N070E",
+						"373300N0701200E_20121101000000_BKEYE_100_QCS_00_0_UFO.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ele-gv-o2/16694214/SFN00000/HRTE5/37N070E/373300N0701200E_20121101000000_BKEYE_100_QCS_00_0_UFO.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=ods-sa-02/Reservoir_Dogs/Reports/aj_n3830e04800_uncllimdis_hrte3r_dem.tif",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"conditioner",
+						"footprint"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "ods-sa-02/Reservoir_Dogs/Reports/aj_n3830e04800_uncllimdis_hrte3r_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/br_s2300w04300_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/br_s2300w04300_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"br_s2300w04300_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/br_s2300w04300_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2330e10300_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2330e10300_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"ch_n2330e10300_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2330e10300_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2400e11830_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2400e11830_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"ch_n2400e11830_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2400e11830_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2430e10230_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2430e10230_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"ch_n2430e10230_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2430e10230_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2700e12030_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2700e12030_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"ch_n2700e12030_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/ch_n2700e12030_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/eg_n2700e03300_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/eg_n2700e03300_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"eg_n2700e03300_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/eg_n2700e03300_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 8",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/in_n3500e07700_uncllimdis_hrte3r_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/in_n3500e07700_uncllimdis_hrte3r_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"in_n3500e07700_uncllimdis_hrte3r_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/in_n3500e07700_uncllimdis_hrte3r_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 9",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ir_n2730e05730_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ir_n2730e05730_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"ir_n2730e05730_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/ir_n2730e05730_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/iz_n3000e04730_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/iz_n3000e04730_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"iz_n3000e04730_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/iz_n3000e04730_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/iz_n3130e04500_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/iz_n3130e04500_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"iz_n3130e04500_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/iz_n3130e04500_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 12",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/kn_n4130e12900_uncllimdis_hrte3r_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/kn_n4130e12900_uncllimdis_hrte3r_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"kn_n4130e12900_uncllimdis_hrte3r_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/kn_n4130e12900_uncllimdis_hrte3r_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 13",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ks_n3730e12830_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ks_n3730e12830_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"ks_n3730e12830_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/ks_n3730e12830_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 14",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/nu_n1200w08630_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/nu_n1200w08630_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"nu_n1200w08630_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/nu_n1200w08630_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 15",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/od_n1030e03300_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/od_n1030e03300_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"od_n1030e03300_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/od_n1030e03300_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 16",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/od_n1130e03230_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/od_n1130e03230_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"od_n1130e03230_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/od_n1130e03230_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 17",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/pk_n3130e07030_uncllimdis_hrte3r_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/pk_n3130e07030_uncllimdis_hrte3r_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"pk_n3130e07030_uncllimdis_hrte3r_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/pk_n3130e07030_uncllimdis_hrte3r_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 18",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/so_n0500e04530_uncllimdis_hrte3r_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/so_n0500e04530_uncllimdis_hrte3r_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"so_n0500e04530_uncllimdis_hrte3r_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/so_n0500e04530_uncllimdis_hrte3r_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 19",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/sy_n3300e03630_uncllimdis_hrte3_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/sy_n3300e03630_uncllimdis_hrte3_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"sy_n3300e03630_uncllimdis_hrte3_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/sy_n3300e03630_uncllimdis_hrte3_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HRTE3 - 20",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ym_n1530e04430_uncllimdis_hrte3r_dem.tif?fingerprint=&file_uri=s3://ods-sa-02/Reservoir_Dogs/Reports/ym_n1530e04430_uncllimdis_hrte3r_dem.tif",
+					"protocol": "localhost/api/conditioner/footprint?fingerprint=&file_uri=s3",
+					"host": [
+						"ods-sa-02"
+					],
+					"path": [
+						"Reservoir_Dogs",
+						"Reports",
+						"ym_n1530e04430_uncllimdis_hrte3r_dem.tif"
+					],
+					"query": [
+						{
+							"key": "fingerprint",
+							"value": ""
+						},
+						{
+							"key": "file_uri",
+							"value": "s3://ods-sa-02/Reservoir_Dogs/Reports/ym_n1530e04430_uncllimdis_hrte3r_dem.tif"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

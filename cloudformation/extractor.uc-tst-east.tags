@@ -1,0 +1,6 @@
+SPID=65044
+#SIDR_Date=20200806
+Office=SFN
+Description=Extract meta-data and create in c3po
+Team=CloudCity
+AppName=extractor

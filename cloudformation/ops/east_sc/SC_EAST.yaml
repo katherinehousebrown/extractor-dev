@@ -1,0 +1,187 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Metadata Extractor Deployment
+
+Parameters:
+
+  AppName:
+    Default: 'ods/extractor:latest'
+    Description: Enter the Application Name for the Console
+    Type: String
+
+  BaseAMI:
+    Description: Select the AMI to use as the base AMI for all services
+    Type: 'AWS::EC2::Image::Id'
+
+  IAMRole:
+    Default: reservoir_dogs_inst
+    Description: Enter an IAM Role to use
+    Type: String
+
+  InstanceSize:
+    Default: m4.large
+    Description: The size of the instance
+    Type: String
+
+  WorkerSecurityGroups:
+    Description: Enter a security group name HTTP
+    Type: 'List<AWS::EC2::SecurityGroup::Id>'
+
+  WorkerSubnetIDs:
+    Description: Subnet IDs for HTTP
+    Type: 'List<AWS::EC2::Subnet::Id>'
+
+  WorkerAvailZones:
+    Description: Availability Zones for HTTP
+    Type: 'List<AWS::EC2::AvailabilityZone::Name>'
+
+  MinASGInstances:
+    Default: 2
+    Description: The minimum number of instances for the ASG
+    Type: Number
+
+  MaxASGInstances:
+    Default: 10
+    Description: The maximum number of instances for the ASG
+    Type: Number
+
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
+    Type: 'AWS::EC2::KeyPair::KeyName'
+    ConstraintDescription: must be the name of an existing EC2 KeyPair.
+
+  VpcId:
+    Description: VPC ID
+    Type: 'AWS::EC2::VPC::Id'
+
+  ELBName:
+    Default: EXTRACT-LB
+    Description: Name of the ELB
+    Type: String
+
+  TargetGroupName:
+    Default: EXTRACT-TG
+    Description: Name of the Target Group
+    Type: String
+
+Resources:
+  SimpleConfig:
+    Type: 'AWS::AutoScaling::LaunchConfiguration'
+    Properties:
+      ImageId: !Ref BaseAMI
+      SecurityGroups: !Ref WorkerSecurityGroups
+      IamInstanceProfile: !Ref IAMRole
+      InstanceType: !Ref InstanceSize
+      KeyName: !Ref KeyName
+
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 50
+            VolumeType: gp2
+            DeleteOnTermination: true
+
+      UserData: !Base64
+        'Fn::Sub': >
+          #!/bin/bash
+
+          export PATH=/usr/local/bin:$PATH
+
+          export AWS_CA_BUNDLE="/etc/pki/tls/certs/ca_bundle.crt"
+
+          exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
+
+          aws --region ${AWS::Region} s3 cp s3://ods-sa-01/Reservoir_Dogs/Diode_Transfer_Service/UC-SC/jenkins/artifacts/builds/deploy/ods-extractor/sc/start.sh start.sh
+
+          chmod 755 start.sh
+
+          ./start.sh
+
+  ExtractorLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Ref ELBName
+      Scheme: "internal"
+      Subnets: !Ref WorkerSubnetIDs
+      SecurityGroups: !Ref WorkerSecurityGroups
+      Tags:
+        - Key: System
+          Value: "Reservoir Dogs"
+
+  ExtractorTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Ref TargetGroupName
+      HealthCheckPath: "/api/extractor/health"
+      Port: 80
+      Protocol: "HTTP"
+      VpcId: !Ref VpcId
+      Tags:
+        - Key: System
+          Value: "Reservoir Dogs"
+
+  ExtractorListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      Port: 80
+      Protocol: "HTTP"
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref ExtractorTargetGroup
+      LoadBalancerArn: !Ref ExtractorLoadBalancer
+
+  MyServerGroup:
+    Type: 'AWS::AutoScaling::AutoScalingGroup'
+    Properties:
+      LaunchConfigurationName: !Ref SimpleConfig
+      AvailabilityZones: !Ref WorkerAvailZones
+      VPCZoneIdentifier: !Ref WorkerSubnetIDs
+      TargetGroupARNs: [!Ref ExtractorTargetGroup]
+      Tags:
+        - Key: Name
+          Value: !Ref AppName
+          PropagateAtLaunch: true
+        - Key: System
+          Value: Reservoir Dogs
+          PropagateAtLaunch: true
+        - Key: Alerting
+          Value: 'True'
+          PropagateAtLaunch: true
+        - Key: POC
+          Value: odsDataResevoirDogs@nga.mil
+          PropagateAtLaunch: true
+        - Key: Function
+          Value: Metadata Extractor
+          PropagateAtLaunch: true
+
+
+      DesiredCapacity: !Ref MinASGInstances
+      MinSize: !Ref MinASGInstances
+      MaxSize: !Ref MaxASGInstances
+      HealthCheckGracePeriod: 300
+
+  ScaleUpPolicy:
+    Type: 'AWS::AutoScaling::ScalingPolicy'
+    Properties:
+      AdjustmentType: ChangeInCapacity
+      AutoScalingGroupName: !Ref MyServerGroup
+      Cooldown: '300'
+      ScalingAdjustment: 1
+
+  CPUAlarmHigh:
+    Type: 'AWS::CloudWatch::Alarm'
+    Properties:
+      EvaluationPeriods: 10
+      Statistic: Average
+      Threshold: 75
+      AlarmDescription: Alarm if CPU too high or metric disappears indicating instance is down
+      Period: 60
+      AlarmActions:
+        - !Ref ScaleUpPolicy
+
+      Namespace: AWS/EC2
+
+      Dimensions:
+        - Name: AutoScalingGroupName
+          Value: !Ref MyServerGroup
+      ComparisonOperator: GreaterThanThreshold
+      MetricName: CPUUtilization

@@ -1,0 +1,155 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Extractor stack.
+
+Parameters:
+  VpcId:
+    Type: String
+    Description: VPC Id to deploy elasticache and lambdas
+  SubnetId:
+    Type: String
+    Description: Subnet Id to deploy to
+  PermissionsBoundaryArn:
+    Type: String
+    Description: ARN for PermissionsBoundary policy to allow for test and ops deploys
+
+Resources:
+  ExtractorResultQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      MessageRetentionPeriod: 345600 # 4 days
+      VisibilityTimeout: 60 # Default is 30 s
+
+  ProductQueue:
+    Type: AWS::SQS::Queue
+    Properties:
+      MessageRetentionPeriod: 345600 # 4 days
+      VisibilityTimeout: 60 # Default is 30 s
+
+  GeoLambdaLayer:
+    Type: AWS::Lambda::LayerVersion
+    Properties:
+      # CompatibleRuntimes:
+      #   - python3.6
+      Content: ../deploy/lambda-gdal-layer.zip
+      Description: Geolambda version 2. Native geospatial libaries for all runtimes
+      LayerName: geolambda-layer
+
+  GeoLambdaPythonLayer:
+    Type: AWS::Lambda::LayerVersion
+    Properties:
+      CompatibleRuntimes:
+        - python3.6
+      Content: ../deploy/lambda-py-layer.zip
+      Description: Geolambda python version 2
+      LayerName: geolambda-python-layer
+
+  ExtractorFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: Extractor
+      Handler: extractor.LambdaHandler.handler
+      Runtime: python3.6
+      CodeUri: ../deploy/extractor.zip
+      MemorySize: 256
+      Timeout: 30
+      Role: !GetAtt ExtractorRole.Arn
+      VpcConfig:
+        SubnetIds:
+          - !Ref SubnetId
+        SecurityGroupIds:
+          - !Ref ExtractorSecurityGroup
+      Environment:
+        Variables:
+          ENVIRONMENT: dev
+          C3PO_DNSNAME: !ImportValue InternalLoadBalancerDomainName
+          GDAL_DATA: /opt/share/gdal
+          PROJ_LIB: /opt/share/proj
+          RESULT_QUEUE: !Ref ExtractorResultQueue
+          PRODUCT_QUEUE: !Ref ProductQueue
+          SQS_ENDPOINT: !Join ['.', ['https://sqs', !Ref AWS::Region, 'amazonaws.com']]
+      Events:
+        ExtractorSqsEvent:
+          Type: SQS
+          Properties:
+            Queue: !ImportValue C3POListenerResultQueueArn
+            BatchSize: 5
+            Enabled: true
+      Layers:
+        - !Ref GeoLambdaLayer
+        - !Ref GeoLambdaPythonLayer
+
+  ExtractorRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Path: '/'
+      PermissionsBoundary: !Ref PermissionsBoundaryArn
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: 'Allow'
+            Principal:
+              Service:
+                - 'lambda.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole
+      Policies:
+        - PolicyName: 'security'
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: 'Allow'
+                Action:
+                  - 's3:GetObject'
+                  - 's3:HeadObject'
+                  - 's3:PutObjectTagging'
+                  - 's3:PutObjectVersionTagging'
+                Resource: '*'
+              - Effect: 'Allow'
+                Action:
+                  - 'sqs:GetQueueAttributes'
+                  - 'sqs:ReceiveMessage'
+                  - 'sqs:DeleteMessage'
+                Resource: !ImportValue C3POListenerResultQueueArn
+              - Effect: 'Allow'
+                Action:
+                  - 'sqs:SendMessage'
+                Resource: !GetAtt ExtractorResultQueue.Arn
+              - Effect: 'Allow'
+                Action:
+                  - 'sqs:SendMessage'
+                Resource: !GetAtt ProductQueue.Arn
+
+  ExtractorSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: 'Extractor security group'
+      VpcId: !Ref VpcId
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          FromPort: 443
+          IpProtocol: tcp
+          ToPort: 443
+Outputs:
+  ExtractorResultQueueArn:
+    Description: ARN of Extractor result queue
+    Value: !GetAtt ExtractorResultQueue.Arn
+    Export:
+      Name: ExtractorResultQueueArn
+  ExtractorResultQueueUrl:
+    Description: Url of Extractor result queue
+    Value: !Ref ExtractorResultQueue
+    Export:
+      Name: ExtractorResultQueueUrl
+  ProductQueueArn:
+    Description: ARN of Extractor product result queue
+    Value: !GetAtt ProductQueue.Arn
+    Export:
+      Name: ProductQueueArn
+  ProductQueueUrl:
+    Description: Url of Extractor product result queue
+    Value: !Ref ProductQueue
+    Export:
+      Name: ProductQueueUrl

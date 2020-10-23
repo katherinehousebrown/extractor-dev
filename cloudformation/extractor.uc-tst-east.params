@@ -1,0 +1,3 @@
+VpcId=vpc-3f9f0c46
+SubnetId=subnet-0eb58af625f1f7ef9
+PermissionsBoundaryArn=arn:aws:iam::698063560496:policy/Delegated-Boundaries
