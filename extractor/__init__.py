@@ -153,11 +153,12 @@ def create_app(config=None):
             extractor = GdalExtractor.factory(fileuri, log)
 
             resp = extractor.extract()
-
+            log.error(resp)
             if resp is None:
+                log.error('oh no')
                 return make_response(jsonify({'Unsupported Object-type': 'No Metadata Found'}), 204)
             else:
-
+                log.error(jsonify(resp))
                 return make_response(jsonify(resp))
 
     @app.route('/extractor')
